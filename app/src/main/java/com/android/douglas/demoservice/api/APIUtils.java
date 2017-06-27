@@ -9,6 +9,6 @@ public class APIUtils {
 
     public static LinhaAPI getLinhaAPIVersion(){
         return RetrofitCliente.getClient(BASE_URL).create(LinhaAPI.class);
-
+   
     }
 }

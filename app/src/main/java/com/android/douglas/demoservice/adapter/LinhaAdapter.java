@@ -1,11 +1,13 @@
 package com.android.douglas.demoservice.adapter;
 
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.douglas.demoservice.R;
 import com.android.douglas.demoservice.api.APIUtils;
@@ -20,7 +22,6 @@ import java.util.List;
 
 public class LinhaAdapter  extends RecyclerView.Adapter<LinhaAdapter.LinhaViewHolder>{
     private List<Linha> linhas;
-
     public LinhaAdapter(List<Linha> linhas) {
         this.linhas = linhas;
     }
@@ -61,6 +62,12 @@ public class LinhaAdapter  extends RecyclerView.Adapter<LinhaAdapter.LinhaViewHo
             ivLogo = (ImageView) itemView.findViewById(R.id.ivLogo);
             tvCor = (TextView) itemView.findViewById(R.id.tvCor);
             tvNumero = (TextView) itemView.findViewById(R.id.tvNumero);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(v.getContext(),tvCor.getText().toString(),Toast.LENGTH_LONG).show();
+                }
+            });
         }
     }
     public void update(List<Linha> linhas){

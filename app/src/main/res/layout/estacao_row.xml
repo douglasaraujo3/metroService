@@ -9,18 +9,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:id="@+id/ivLogo"/>
         <TextView
-            android:id="@+id/tvCor"
+            android:id="@+id/tvNome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             />
 
         <TextView
-            android:id="@+id/tvNumero"
+            android:id="@+id/tvEndereco"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
